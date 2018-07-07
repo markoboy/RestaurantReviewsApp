@@ -1,0 +1,40 @@
+/* CSS Document */
+/* ==========================================
+ * General tags styles
+ * =========================================*/
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font: 10pt/1.5 Arial, Helvetica, sans-serif;
+	color: #333;
+	background-color: #fdfdfd;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+a {
+	color: orange;
+	text-decoration: none;
+
+	transition: all 0.3s linear;
+}
+
+a:hover, a:focus {
+	color: #3397db;
+	text-shadow: 3px 2px 20px orange;
+}
+
+img {
+	max-width: 100% !important;
+	height: auto;
+	vertical-align: middle;
+	display: block;
+	border: 0;
+}
