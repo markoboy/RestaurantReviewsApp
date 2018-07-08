@@ -178,3 +178,17 @@ class DBHelper {
   } */
 
 }
+
+/* Helper function */
+// Get the header and its offset position
+const header = document.querySelector('header');
+const fixed = header.offsetTop;
+
+/* Add event listener on scroll to add fixed class to header element */
+window.onscroll = () => {
+  if (self.pageYOffset > fixed) {
+    header.classList.add('fixed');
+  } else {
+    header.classList.remove('fixed');
+  }
+};

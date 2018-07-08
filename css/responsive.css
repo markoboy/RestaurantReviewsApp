@@ -19,6 +19,10 @@ ul {
 	padding: 0;
 }
 
+a:focus {
+	outline: none; /* No outline on focus for better visual */
+}
+
 a {
 	color: orange;
 	text-decoration: none;
@@ -37,4 +41,84 @@ img {
 	vertical-align: middle;
 	display: block;
 	border: 0;
+}
+
+/* ==========================================
+ * Header styles
+ * =========================================*/
+.header.fixed {
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+/* Add top-padding to the main content to prevent sudden quick movement
+ * when the header get fixed position on top */
+.fixed + main {
+	padding-top: 102px;
+}
+
+.header_nav {
+	height: 80px;
+	background-color: #252831;
+	text-align: center;
+
+	display: flex; /* Display as flex to center the heading in the middle */
+	justify-content: center;
+	align-items: center;
+}
+
+.header_nav h1 a {
+	color: #fff;
+	font-size: 14pt;
+	font-weight: 200;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+}
+
+/* Header breadcrumb styles */
+.header_breadcrumb {
+	padding: 10px 40px 16px;
+	background-color: #eee;
+	font-size: 17px;
+	margin: 0;
+}
+
+.header_breadcrumb li {
+	display: inline;
+}
+
+.header_breadcrumb li+li:before {
+	padding: 8px;
+	color: black;
+	content: "/\00a0";
+}
+
+.header_breadcrumb li a {
+	color: #0275d8;
+
+	position: relative;
+	overflow: hidden;
+}
+
+.header_breadcrumb li a:hover, .header_breadcrumb li a:focus {
+	color: #01447e;
+	text-shadow: none;
+}
+
+/* Add bottom border on focus */
+.header_breadcrumb li a::before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 1.5px solid #01447e;
+	transform: scaleX(0);
+	transition: transform 0.25s linear;
+}
+
+.header_breadcrumb li a:hover::before, .header_breadcrumb li a:focus::before {
+	transform: scaleX(1);
 }
