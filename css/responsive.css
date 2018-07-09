@@ -122,3 +122,141 @@ img {
 .header_breadcrumb li a:hover::before, .header_breadcrumb li a:focus::before {
 	transform: scaleX(1);
 }
+
+/* ==========================================
+ * Home page main styles
+ * =========================================*/
+.map {
+	width: 100%;
+	height: 360px;
+	background-color: #ccc;
+}
+
+/* Main container styles */
+.main-container {
+	width: 100%;
+}
+
+/* Restaurant Filtering styles */
+.filter-options {
+	width: 100%;
+	height: 50px;
+	background-color: #3397db;
+	align-items: center;
+}
+
+.filter-options h2 {
+	color: white;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0 20px;
+	padding-top: 5px;
+}
+
+.filter-options select {
+	background-color: white;
+	border: 1px solid #fff;
+	font-size: 11pt;
+	height: 35px;
+	letter-spacing: 0;
+	margin: 15px;
+	padding: 0 10px;
+	width: 200px;
+}
+
+/* Add border on hover and focus */
+.filter-options select:hover {
+	border: 1.5px solid orange;
+}
+
+.filter-options select:focus {
+	outline-color: orange;
+}
+
+/* ==========================================
+ * Restaurants Listing styles
+ * =========================================*/
+.restaurants-list {
+	background-color: #f3f3f3;
+	list-style: outside none none;
+	margin: 0;
+	padding: 30px 20px 60px;
+	text-align: left;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.restaurants-list li {
+	background-color: #fff;
+	border: 2px solid #ccc;
+	border-radius: 6px;
+	margin: 15px 1% 15px;
+	width: 22%;
+	min-height: 380px;
+	padding: 10px 30px 25px;
+	box-shadow: 5px 5px 20px 0 grey;
+
+	/* Flexbox in order to place the button to the bottom of the container */
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.restaurants-list .restaurant-img {
+	border-radius: 3px;
+}
+
+.restaurants-list li h1 {
+	color: #f18200;
+	font-size: 14pt;
+	font-weight: 200;
+	letter-spacing: 0;
+	line-height: 1.3;
+	margin: 20px 0 10px;
+	text-transform: uppercase;
+	position: relative;
+}
+
+/* Add a line before the heading, seperating the img with the details */
+.restaurants-list li h1:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -10px;
+	width: 100%;
+	border-bottom: 1.5px solid #d9d9d9;
+}
+
+.restaurants-list li p {
+	margin: 0;
+	font-size: 11pt;
+}
+
+/* Apply flex-grow to the last paragraph element to place button to the bottom */
+.restaurants-list li p:last-of-type {
+	flex-grow: 1;
+}
+
+.restaurants-list li a {
+	background-color: orange;
+	border-bottom: 3px solid #eee;
+	border-radius: 6px;
+	color: #fff;
+	display: inline-block;
+	font-size: 10pt;
+	margin: 15px 0 0;
+	padding: 8px 30px 10px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* Add smooth style transition on hover and focus */
+.restaurants-list li a:hover, .restaurants-list li a:focus {
+	background-color: #3397db;
+	border-bottom: 3px solid #339799;
+	box-shadow: 3px 3px 20px 1px orange;
+	transition: border-bottom 0s ease-in, all 0.25s linear;
+}
