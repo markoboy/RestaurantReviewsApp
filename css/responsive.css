@@ -46,6 +46,10 @@ img {
 /* ==========================================
  * Header styles
  * =========================================*/
+.header {
+	z-index: 10000;
+}
+
 .header.fixed {
 	position: fixed;
 	width: 100%;
@@ -55,7 +59,7 @@ img {
 /* Add top-padding to the main content to prevent sudden quick movement
  * when the header get fixed position on top */
 .fixed + main {
-	padding-top: 102px;
+	padding-top: 85px;
 }
 
 .header_nav {
@@ -195,7 +199,7 @@ img {
 	border-radius: 6px;
 	margin: 15px 1% 15px;
 	width: 22%;
-	min-height: 380px;
+	min-height: 360px;
 	padding: 10px 30px 25px;
 	box-shadow: 5px 5px 20px 0 grey;
 
