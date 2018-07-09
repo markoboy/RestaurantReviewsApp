@@ -264,3 +264,16 @@ img {
 	box-shadow: 3px 3px 20px 1px orange;
 	transition: border-bottom 0s ease-in, all 0.25s linear;
 }
+
+/* ==========================================
+ * Footer styles
+ * =========================================*/
+.footer {
+	background-color: #444;
+	color: #aaa;
+	font-size: 8pt;
+	letter-spacing: 1px;
+	padding: 25px;
+	text-align: center;
+	text-transform: uppercase;
+}
