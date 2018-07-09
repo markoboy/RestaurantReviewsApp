@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-	font: 10pt/1.5 Arial, Helvetica, sans-serif;
+	font: 1em/1.5 Arial, Helvetica, sans-serif;
 	color: #333;
 	background-color: #fdfdfd;
 }
@@ -74,7 +74,7 @@ img {
 
 .header_nav h1 a {
 	color: #fff;
-	font-size: 14pt;
+	font-size: 1em;
 	font-weight: 200;
 	letter-spacing: 10px;
 	text-transform: uppercase;
@@ -84,7 +84,7 @@ img {
 .header_breadcrumb {
 	padding: 10px 40px 16px;
 	background-color: #eee;
-	font-size: 17px;
+	font-size: 0.9em;
 	margin: 0;
 }
 
@@ -151,7 +151,7 @@ img {
 
 .filter-options h2 {
 	color: white;
-	font-size: 1rem;
+	font-size: 0.9em;
 	font-weight: normal;
 	line-height: 1;
 	margin: 0 20px;
@@ -161,7 +161,7 @@ img {
 .filter-options select {
 	background-color: white;
 	border: 1px solid #fff;
-	font-size: 11pt;
+	font-size: 0.9em;
 	height: 35px;
 	letter-spacing: 0;
 	margin: 15px;
@@ -214,7 +214,7 @@ img {
 
 .restaurants-list li h1 {
 	color: #f18200;
-	font-size: 14pt;
+	font-size: 1em;
 	font-weight: 200;
 	letter-spacing: 0;
 	line-height: 1.3;
@@ -235,7 +235,7 @@ img {
 
 .restaurants-list li p {
 	margin: 0;
-	font-size: 11pt;
+	font-size: 0.9em;
 }
 
 /* Apply flex-grow to the last paragraph element to place button to the bottom */
@@ -249,7 +249,7 @@ img {
 	border-radius: 6px;
 	color: #fff;
 	display: inline-block;
-	font-size: 10pt;
+	font-size: 1em;
 	margin: 15px 0 0;
 	padding: 8px 30px 10px;
 	text-align: center;
@@ -271,7 +271,7 @@ img {
 .footer {
 	background-color: #444;
 	color: #aaa;
-	font-size: 8pt;
+	font-size: 0.8em;
 	letter-spacing: 1px;
 	padding: 25px;
 	text-align: center;
