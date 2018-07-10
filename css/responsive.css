@@ -127,6 +127,11 @@ img {
 	transform: scaleX(1);
 }
 
+.header_breadcrumb [aria-current="page"] {
+	color: #666;
+	font-weight: 300;
+}
+
 /* ==========================================
  * Home page main styles
  * =========================================*/
