@@ -181,7 +181,16 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  /* Add aria button specifications */
   more.setAttribute('role', 'button');
+  more.setAttribute('aria-label', `View details of ${restaurant.name} restaurant.`);
+  more.addEventListener('keypress', (event) => {
+    /* If space was pressed click the button */
+    if (event.keyCode == 32) {
+      event.preventDefault();
+      more.click();
+    }
+  });
   li.append(more);
 
   return li;
