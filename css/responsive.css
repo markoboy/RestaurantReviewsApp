@@ -136,8 +136,13 @@ img {
 	background-color: #ccc;
 }
 
+.map_container a:hover, .map_container a:focus {
+	text-decoration: underline;
+	color: darkblue;
+}
+
 /* Main container styles */
-.main-container {
+.main_container {
 	width: 100%;
 }
 
@@ -271,7 +276,7 @@ img {
 .footer {
 	background-color: #444;
 	color: #aaa;
-	font-size: 0.8em;
+	font-size: 0.75em;
 	letter-spacing: 1px;
 	padding: 25px;
 	text-align: center;
