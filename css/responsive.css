@@ -35,14 +35,6 @@ a:hover, a:focus {
 	text-shadow: 3px 2px 20px orange;
 }
 
-img {
-	max-width: 100% !important;
-	height: auto;
-	vertical-align: middle;
-	display: block;
-	border: 0;
-}
-
 /* ==========================================
  * Header styles
  * =========================================*/
@@ -142,8 +134,7 @@ img {
 }
 
 .map_container a:hover, .map_container a:focus {
-	text-decoration: underline;
-	color: darkblue;
+	outline: dashed;
 }
 
 /* Main container styles */
@@ -219,6 +210,11 @@ img {
 }
 
 .restaurants-list .restaurant-img {
+	max-width: 100% !important;
+	height: auto;
+	vertical-align: middle;
+	display: block;
+	border: 0;
 	border-radius: 3px;
 }
 
