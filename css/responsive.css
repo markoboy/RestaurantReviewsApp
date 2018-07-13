@@ -410,3 +410,60 @@ nav[aria-label="Breadcrumb"] {
 	text-align: center;
 	text-transform: uppercase;
 }
+
+/* ==========================================
+ * Media screen styles
+ * =========================================*/
+/* Medium screen size styles */
+@media screen and (max-width: 860px) {
+	nav[aria-label="Breadcrumb"] {
+		width: 100%;
+	}
+
+	.restaurants-list li {
+		width: calc(44% - 64px);
+	}
+
+	.map_container {
+		height: 300px;
+	}
+
+	.inside .maincontent {
+		flex-wrap: wrap;
+	}
+
+	.inside .map_container {
+		position: inherit;
+		width: 100%;
+		height: 220px;
+	}
+
+	.inside .wrapper {
+		width: 100%;
+	}
+}
+
+/* Small screen size styles */
+@media screen and (max-width: 501px) {
+	.map_container {
+		height: 220px;
+	}
+
+	.filter-options select {
+		width: 35%;
+		min-width: 90px;
+	}
+
+	.restaurants-list li {
+		width: 100%;
+		min-height: 300px;
+	}
+
+	.inside header + main {
+		padding-top: 122px;
+	}
+
+	body {
+		font-size: 0.75em;
+	}
+}
