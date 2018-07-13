@@ -384,16 +384,18 @@ nav[aria-label="Breadcrumb"] {
 /* Restaurant hours table styles */
 #restaurant-hours {
 	width: 100%;
-}
-
-/* Add different background color on odd rows for visibility */
-#restaurant-hours tr:nth-child(odd) {
-	background: #f4f4f4;
-}
-
-#restaurant-hours td {
 	color: #666;
 	line-height: 1.5;
+}
+
+#restaurant-hours caption {
+	font-size: 0.9em;
+	text-decoration: underline;
+}
+
+/* Add different background color on even rows for visibility */
+#restaurant-hours tr:nth-child(even) {
+	background: #f4f4f4;
 }
 
 /* ==========================================
