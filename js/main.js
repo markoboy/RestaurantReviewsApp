@@ -9,6 +9,12 @@ var  markers = [];
 document.addEventListener('DOMContentLoaded', (event) => {
   fetchNeighborhoods();
   fetchCuisines();
+  // Register service worker.
+  DBHelper._registerServiceWorker();
+  // Update restaurants if the connection is offline.
+  if (!window.navigator.onLine) {
+    updateRestaurants();
+  }
 });
 
 /**
@@ -172,6 +178,9 @@ createRestaurantHTML = (restaurant) => {
  * Add markers for current restaurants to the map.
  */
 addMarkersToMap = (restaurants = self.restaurants) => {
+  // Return if google map is not available.
+  if (typeof google === 'undefined') return;
+
   restaurants.forEach(restaurant => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);

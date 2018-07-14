@@ -1,6 +1,22 @@
 let restaurant;
 
 /**
+ * On page load fetch restaurants from url to create the page.
+ * For offline use.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  if (!window.location.onLine) {
+    fetchRestaurantFromURL((error, restaurant) => {
+      if (error) {
+        console.log(error);
+      } else {
+        fillBreadcrumb();
+      }
+    });
+  }
+});
+
+/**
  * Initialize google map.
  */
 window.initMap = () => {
@@ -17,7 +33,7 @@ window.initMap = () => {
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
     }
   });
-}
+};
 
 /**
  * Get current restaurant from page URL.
@@ -141,6 +157,9 @@ createReviewHTML = (review) => {
  */
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
+
+  if (breadcrumb.children.length >= 2) return; // Check if the breadcrumb is already included and return.
+
   const li = document.createElement('li');
   li.innerHTML = `<a href="#" aria-current="page">${restaurant.name}</a>`;
   breadcrumb.appendChild(li);

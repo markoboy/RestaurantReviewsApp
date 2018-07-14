@@ -163,6 +163,9 @@ class DBHelper {
    * Map marker for a restaurant.
    */
   static mapMarkerForRestaurant(restaurant, map) {
+    // Return if google map is not available.
+    if (typeof google === 'undefined') return;
+
     const marker = new google.maps.Marker({
       position: restaurant.latlng,
       title: restaurant.name,
@@ -172,6 +175,55 @@ class DBHelper {
       }
     );
     return marker;
-  } 
+  }
 
+  /**
+   * Register Service Worker.
+   */
+  static _registerServiceWorker() {
+    /* Stop the registration if no service worker is available */
+    if (!navigator.serviceWorker) return;
+
+    // Register the service worker.
+    navigator.serviceWorker.register('/sw.js').then(function(reg) {
+      // If there is no controller return.
+      if (!navigator.serviceWorker.controller) return;
+
+      let worker;
+      // Check the service worker state.
+      if (reg.waiting) {
+        worker = reg.waiting;
+        worker.postMessage( { skipWaiting: true } );
+        return;
+      }
+
+      if (reg.installing) {
+        DBHelper._updateServiceWorker(reg.installing);
+        return;
+      }
+
+      // Listen for when an update occurs.
+      reg.addEventListener('updatefound', () => {
+        DBHelper._updateServiceWorker(reg.installing);
+      });
+    }).catch(function(error) {
+      console.log('ServiceWorker registration failed: ', error);
+    });
+
+    // Reload the window if controller changed.
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      window.location.reload();
+    });
+  }
+
+  /**
+   * Update the service worker.
+   */
+  static _updateServiceWorker(worker) {
+    worker.addEventListener('statechange', () => {
+      if (worker.state === 'installed') {
+        worker.postMessage( { skipWaiting: true } );
+      }
+    });
+  }
 }
