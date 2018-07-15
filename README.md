@@ -1,32 +1,88 @@
-# Mobile Web Specialist Certification Course
+# Udacity FEND - Restaurant Reviews Project
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
 
-## Project Overview: Stage 1
+# Table of Contents
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+- [Project Overview](#project-overview)
+- [Installation](#installation)
+	- [Live demo](#live-demo)
+	- [Local installation](#local-installation)
+- [Browsers tested](#browsers-tested)
+- [Tools used](#tools-used)
+	- [Resources used](#resources-used)
+- [Author](#author)
+- [Contribution](#contribution)
+- [License](#license)
 
-### Specification
+# Project Overview
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+[(Back to top)](#table-of-contents)
 
-### What do I do from here?
+For the **Restaurant Reviews** project my goal was to convert a static webpage to a mobile-ready web application. Through the course I was given a static design that lacks accessibility in order to convert the design to be responsive on different sized displays and to make it accessible for screen reader users. In addition, I had to add a service worker in order to create an offline experience for the users of the app.
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+# Installation
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+### Live Demo
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+[(Back to top)](#table-of-contents)
 
-## Leaflet.js and Mapbox:
+You can view a live demo on this [git page](https://markoboy.github.io/RestaurantReviewsApp/)
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
+### Local Installation
 
-### Note about ES6
+[(Back to top)](#table-of-contents)
 
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
+- Download the repository from the download button.
+- Or clone the repository with Git.
+- `git clone https://github.com/markoboy/RestaurantReviewsApp.git`
+- Open the terminal into the project directory and spin up the server with `python -m SimpleHTTPServer 8000`. You need to have [Python](https://www.python.org) installed in order to run the server.
+- Once you run the server, visit the site: [http://localhost:8000](http://localhost:8000)
 
+# Browsers Tested
 
+[(Back to top)](#table-of-contents)
 
+- [**Google Chrome**](https://www.google.com/chrome/) - Version 67, Windows 10 x64
+	- [**ChromeVox**](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) - Test screen reader
+- [**Firefox**](https://www.mozilla.org/en-GB/firefox/new/) - Version 61, Windows 10 x64
+- [**Android Google Chrome**](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en_GB) - Version 64, Redmi Note 3 Pro
+
+# Tools Used
+
+[(Back to top)](#table-of-contents)
+
+- [*Git version control*](https://git-scm.com/)
+- [*Sublime text editor 3*](https://www.sublimetext.com/)
+- [*Js Hint*](http://jshint.com/)
+
+### Resources Used
+
+[(Back to top)](#table-of-contents)
+
+- **Styles**
+	- [normalize.css v8.0.0](github.com/necolas/normalize.css)
+- **API**
+	- [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial)
+
+# Author
+
+[(Back to top)](#table-of-contents)
+
+- _Responsive Design, Accessibilty and ServiceWorker_ - [Athanasios Markou](https://www.linkedin.com/in/a-markou/)
+- _Initial work_ - [Udacity](https://github.com/udacity/mws-restaurant-stage-1)
+
+# Contribution
+
+[(Back to top)](#table-of-contents)
+
+Pull requests are not welcomed, as this is a project to test my skills in `Responsive layout`, `Accessibilty features` and `ServiceWorker API`.
+
+# License
+
+[(Back to top)](#table-of-contents)
+
+This project is licensed under the [MIT License](/LICENSE)
