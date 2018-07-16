@@ -228,7 +228,7 @@ nav[aria-label="Breadcrumb"] {
 	border-radius: 3px;
 }
 
-.restaurants-list li h1 {
+.restaurants-list li h3 {
 	color: #f18200;
 	font-size: 1em;
 	font-weight: 200;
@@ -240,7 +240,7 @@ nav[aria-label="Breadcrumb"] {
 }
 
 /* Add a line before the heading, seperating the img with the details */
-.restaurants-list li h1:after {
+.restaurants-list li h3:after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -358,7 +358,7 @@ nav[aria-label="Breadcrumb"] {
 	box-shadow: 0 7px 20px 0 grey;
 }
 
-#reviews-container h2 {
+#reviews-container h3 {
 	color: #f58500;
 	font-size: 1.8em;
 	font-weight: 300;

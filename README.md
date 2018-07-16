@@ -30,7 +30,7 @@ For the **Restaurant Reviews** project my goal was to convert a static webpage t
 
 [(Back to top)](#table-of-contents)
 
-You can view a live demo on this [git page](https://markoboy.github.io/RestaurantReviewsApp/)
+You can view a live demo on this [git page](https://markoboy.github.io/RestaurantReviewsApp/). You can only view the page layout as because the route of the server is `markoboy.github.io/` the data is not fetched because they are on the `RestaurantReviewsApp`. In order to make it work I have to change all the code to fetch from `RestaurantReviewsApp/` but then it will not work locally. So I decided to let it as it is in order to view the layout and the map :).
 
 ### Local Installation
 
