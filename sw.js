@@ -1,4 +1,4 @@
-var staticCacheName = 'restaurant-static-v1.9';
+var staticCacheName = 'restaurant-static-v2.0';
 
 /**
  * Install the service worker.
